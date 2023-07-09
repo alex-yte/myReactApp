@@ -1,0 +1,7 @@
+#main-alert {
+    display: none;
+}
+
+#main-alert.show {
+    display: block;
+}
