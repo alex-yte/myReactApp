@@ -1,8 +1,11 @@
+import "./style.css";
 import { useState } from "react";
 import ListGroup from "./components/ListGroup";
 import Message from "./components/Message";
 import Alert from "./components/alert";
 import Button from "./components/button";
+import Form from "./components/Form";
+import List from "./components/TheList";
 
 function App() {
   let items = ["NY", "SF", "Tokyo", "London", "Paris"];
@@ -26,7 +29,9 @@ function App() {
 
   return (
     <div>
-      <Message name="Alex" />
+      <List item="text" />
+
+      <Message name="Denis" />
       {alertVisible && (
         <Alert onClose={() => setAlertVisibility(false)}>
           Hello <span className="alert-link">world</span>!
@@ -36,6 +41,7 @@ function App() {
       <Button color="outline-warning" onButtonClick={handleButtonClick}>
         Click me
       </Button>
+      <Form content="My Form" />
       <ListGroup
         items={items}
         heading="Cities"
