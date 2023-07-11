@@ -2,10 +2,11 @@ import "./style.css";
 import { useState } from "react";
 import ListGroup from "./components/ListGroup";
 import Message from "./components/Message";
-import Alert from "./components/alert";
-import Button from "./components/button";
+import Alert from "./components/Alert";
+import Button from "./components/Button";
 import Form from "./components/Form";
 import List from "./components/TheList";
+import People from "./components/People";
 
 function App() {
   let items = ["NY", "SF", "Tokyo", "London", "Paris"];
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <div>
+      <People />
       <List item="text" />
 
       <Message name="Denis" />
